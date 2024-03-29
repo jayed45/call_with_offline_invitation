@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "405218918336",
+    "project_id": "test-zego-notif",
+    "storage_bucket": "test-zego-notif.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405218918336:android:82cc9a41e3055be3139225",
+        "android_client_info": {
+          "package_name": "com.zegocloud.zegouikit.example.prebuiltcall"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbzRnQWWgOKenrEO3tvFy282gHlICKLf0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

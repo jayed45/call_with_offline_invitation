@@ -41,10 +41,13 @@ void onUserLogin() {
     notificationConfig: ZegoCallInvitationNotificationConfig(
       androidNotificationConfig: ZegoCallAndroidNotificationConfig(
         showFullScreen: true,
-        channelID: "ZegoUIKit",
-        channelName: "Call Notifications",
-        sound: "call",
-        icon: "call",
+        callIDVisibility: true,
+        callChannel: ZegoCallAndroidNotificationChannelConfig(
+            channelID: "ZegoUIKit",
+            channelName: "Call Notifications",
+            sound: "call",
+            icon: "call"
+        ),
       ),
       iOSNotificationConfig: ZegoCallIOSNotificationConfig(
         systemCallingIconName: 'CallKitIcon',
@@ -52,10 +55,10 @@ void onUserLogin() {
     ),
     requireConfig: (ZegoCallInvitationData data) {
       final config = (data.invitees.length > 1)
-          ? ZegoCallType.videoCall == data.type
+          ? ZegoCallInvitationType.videoCall == data.type
               ? ZegoUIKitPrebuiltCallConfig.groupVideoCall()
               : ZegoUIKitPrebuiltCallConfig.groupVoiceCall()
-          : ZegoCallType.videoCall == data.type
+          : ZegoCallInvitationType.videoCall == data.type
               ? ZegoUIKitPrebuiltCallConfig.oneOnOneVideoCall()
               : ZegoUIKitPrebuiltCallConfig.oneOnOneVoiceCall();
 
